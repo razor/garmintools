@@ -1,0 +1,101 @@
+          WHAT HAPPENS WHEN YOU INADVERTENTLY 
+          ERASE ALL DATA STORED IN THE GARMIN
+
+Because of confusion and misinformation on the newsgroup,  I have 
+asked Garmin Engineering to give us a consensus view of how the 
+accuracy and operation of the G-12XL (and other Garmin equipment
+can be affected by operating the factory test mode while in view
+of  "real" satellites.  In my view,   the  significance  of  the
+"problem" is minimal  since calibration points are automatically
+restored when the unit is operated locked to SVs the next time(s).
+The Garmin answer follows:
+
+Joe Mehaffey
+
+=================================================================
+The answer from Garmin Engineering Follows:
+
+Joe,
+
+Some one  did talk to Jay on the phone.   I guess the answer  was 
+not  clear  to him.  What was said to Dr. Reid  in  the  original 
+email  to  him (who altered it and then posted it  (Garmin  never 
+posted this information))  was that by operating the unit in test 
+mode, AND locking on to a specific satellite,   you would destroy 
+the unit's oscillator compensation curve AT THE TEMPERATURE WHERE 
+THE  LOCK OCCURS.   Perhaps destroy is a bad word, it does  sound 
+somewhat permanent. In fact,  it WILL NOT damage the unit in  any 
+way,   but  will  erase the  oscillator  temperature  calibration 
+point.   It  would  appear that some have  interpreted  it  as  a 
+permanent  degradation  of  the units performance.  For  that  we 
+apologize.  That is NOT correct.
+
+Accuracy  was  never  an issue. The only issue at  stake  is  the 
+ability  of  the unit to lock on to satellites  and  calculate  a 
+position.
+
+As  we  know  from GPS 101,  A GPS  receiver  must  be  precisely 
+synchronized  with  the satellites to operate. We must  know  the 
+exact time the signal left the satellite, and the time the signal 
+arrived  at  the receiver, to calculate the time  difference  and 
+corresponding  range  to the satellite.  By knowing  the  precise 
+location  of  the satellite when the signal left, and  the  range 
+(pseudorange), we know our exact distance from that satellite (at 
+that  point in time). By performing this calculation on  multiple 
+satellites, we can triangulate and calculate our position. 
+
+Obviously,  timimg is everything. We must have a  precise  timing 
+source  for this to work. We could install a rubidium  or  cesium 
+beam oscillator in our GPS receivers, but this would be a  little 
+pricey,  use  a lot more battery power, and the unit would  be  a 
+little bulky. Instead, we use a relatively cheap oscillator,  and 
+a  lot  of software finesse.   Oscillator  compensation  data  is 
+stored  in the unit as a table based upon temperature.  When  the 
+unit  locks  on, it calculates the unit's  oscillator  error  and 
+enters  a  correction factor into this table based  upon  current 
+internal  temperature.  In this fashion the  unit  is  CONSTANTLY 
+"learning"  and fine tuning itself. We burn these units  in  when 
+new  to  calculate  and store calibration  constants  across  the 
+entire rated temperature range of the product.
+
+What  Darrin and the previous Email tried to explain, perhaps  in 
+different  tones, was that running the GPS 12XL, or other  GARMIN 
+units,  in  test  mode, would mis-calibrate  the  units  internal 
+oscillator if the unit locked onto the same satellite it  expects 
+to  see  in the factory environment when connected  to  a  signal 
+generator.  The amount of mis-calibration depends on  where  this 
+particular  satellite happens to be in the sky. If the  satellite  
+is  low on the horizon and heading directly towards or away  from 
+you, there will be significant doppler shift on the signal  which 
+in turn will grossly mis-calibrate our oscillator. This would  be 
+worst-case and statistically rare.
+
+The  net  effect of this type of mis-calibration may  range  from 
+long  acquisition  times to, on rare  circumstances,  failure  to 
+acquire at all.
+
+If the latter occurs, as Darrin pointed out, the user can put the 
+unit  into Autolocate mode, which ignores oscillator  calibration 
+and  the  unit will lock on and begin to  repair  the  correction 
+table for each temperature it experiences. Of course,  some users 
+might  not know to put the unit into Autolocate mode,   they  may 
+see  the  unit not locking onto satellites and believe it  to  be 
+malfunctioning.
+
+As soon as the unit locks on, oscillator calibration is performed 
+and  peak  accuracy  is  immediately  restored.  Of  course,  for 
+complete  repair,  the  unit will need to be locked  on  to  real 
+satellites  for  each temperature point that the  unit  was  mis-
+calibrated to.
+
+Darrin  and I do not disagree on any points. He was  stating  his 
+perspecive  from a designers point of view, and I am  giving  you 
+mine  from the standpoint that we don't want anyone to erase  the 
+calibration from his unit.  
+
+GARMIN International
+1200 E. 151st Street
+Olathe, KS 66062  USA
+
+
+
